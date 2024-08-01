@@ -33,8 +33,9 @@ async function sendMessage() {
             }
         });
 
-        const data = await response.json();
-        addMessageToChatBox('bot', data.reply);
+        // Handle response as text
+        const data = await response.text();
+        addMessageToChatBox('bot', data);
     } catch (error) {
         console.error('Error:', error);
         addMessageToChatBox('bot', 'Sorry, there was a technical issue. Please try again later.');
