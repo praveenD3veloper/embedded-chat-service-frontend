@@ -24,12 +24,13 @@ async function sendMessage() {
     document.getElementById('user-input').value = '';
 
     try {
-        const response = await fetch('http://localhost:8082/chat/generate', {
-            method: 'POST',
+        // Encode the userInput to be safely included in the URL
+        const encodedMessage = encodeURIComponent(userInput);
+        const response = await fetch(`http://localhost:8082/chat/generate?message=${encodedMessage}`, {
+            method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ message: userInput })
+            }
         });
 
         const data = await response.json();
