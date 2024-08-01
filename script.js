@@ -1,3 +1,11 @@
+document.getElementById('chat-icon').addEventListener('click', function() {
+    document.getElementById('chat-container').style.display = 'flex';
+});
+
+document.getElementById('close-chat').addEventListener('click', function() {
+    document.getElementById('chat-container').style.display = 'none';
+});
+
 async function sendMessage() {
     const userInput = document.getElementById('user-input').value;
     if (!userInput) return;
@@ -25,7 +33,7 @@ async function sendMessage() {
 function addMessageToChatBox(sender, message) {
     const chatBox = document.getElementById('chat-box');
     const messageElement = document.createElement('div');
-    messageElement.className = `message ${sender}`;
+    messageElement.className = `message ${sender} card-panel`;
     messageElement.textContent = message;
     chatBox.appendChild(messageElement);
     chatBox.scrollTop = chatBox.scrollHeight;
