@@ -4,57 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finance Guru</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="header">
+
+    <header class="header purple darken-4 white-text center-align">
         <div class="container">
             <h1>Finance Guru</h1>
             <p>Your personal financial advisor</p>
         </div>
     </header>
 
-    <section class="news-container">
-        <div class="container">
-            <h2>Latest Finance News</h2>
-            <div class="news-article">
-                <h3>Market Trends</h3>
+    <section class="news-container container">
+        <h2 class="center-align">Latest Finance News</h2>
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Market Trends</span>
                 <p>The stock market saw significant gains today with major indices reaching new highs...</p>
             </div>
-            <div class="news-article">
-                <h3>Cryptocurrency Update</h3>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Cryptocurrency Update</span>
                 <p>Bitcoin and other cryptocurrencies experienced a slight dip, causing investors to...</p>
             </div>
-            <div class="news-article">
-                <h3>Economic Forecast</h3>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">Economic Forecast</span>
                 <p>Experts predict a steady growth in the economy over the next quarter with...</p>
             </div>
         </div>
     </section>
 
-    <div class="chat-icon" id="chat-icon">
-        <i class="fas fa-comments"></i>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large purple darken-4" id="chat-icon">
+            <i class="large material-icons">chat</i>
+        </a>
     </div>
 
-    <div class="chat-container" id="chat-container">
-        <div class="chat-header">
-            <h2>Chat with Finance Guru</h2>
-            <button id="close-chat">&times;</button>
+    <div class="chat-popup card" id="chat-popup">
+        <div class="chat-header card-title purple darken-4 white-text">
+            Chat with Finance Guru
+            <button class="btn-flat right white-text" id="close-chat">&times;</button>
         </div>
         <div class="chat-box" id="chat-box">
-            <div class="message bot">Welcome to Finance Guru! How can I assist you with your financial questions today?</div>
+            <div class="message bot card-panel grey lighten-4">Welcome to Finance Guru! How can I assist you with your financial questions today?</div>
         </div>
-        <input type="text" id="user-input" placeholder="Type your message here...">
-        <button onclick="sendMessage()">Send</button>
+        <div class="input-field">
+            <input type="text" id="user-input" placeholder="Type your message here...">
+            <button class="btn purple darken-4 white-text" onclick="sendMessage()">Send</button>
+        </div>
     </div>
 
-    <footer class="footer">
+    <footer class="footer purple darken-4 white-text center-align">
         <div class="container">
             <p>© 2024 Finance Guru. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>

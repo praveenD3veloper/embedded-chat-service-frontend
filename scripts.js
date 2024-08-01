@@ -1,9 +1,9 @@
 document.getElementById('chat-icon').addEventListener('click', function() {
-    document.getElementById('chat-container').style.display = 'flex';
+    document.getElementById('chat-popup').style.display = 'flex';
 });
 
 document.getElementById('close-chat').addEventListener('click', function() {
-    document.getElementById('chat-container').style.display = 'none';
+    document.getElementById('chat-popup').style.display = 'none';
 });
 
 async function sendMessage() {
@@ -26,7 +26,7 @@ async function sendMessage() {
         addMessageToChatBox('bot', data.reply);
     } catch (error) {
         console.error('Error:', error);
-        addMessageToChatBox('bot', 'Sorry, there was an error processing your request.');
+        addMessageToChatBox('bot', 'Sorry, there was a technical issue. Please try again later.');
     }
 }
 
