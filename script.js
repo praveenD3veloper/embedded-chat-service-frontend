@@ -6,7 +6,7 @@ async function sendMessage() {
     document.getElementById('user-input').value = '';
 
     try {
-        const response = await fetch('https://your-backend-service-url.com/api/chat', {
+        const response = await fetch('http://localhost:8082/chat/generate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
