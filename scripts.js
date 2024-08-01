@@ -1,9 +1,19 @@
 document.getElementById('chat-icon').addEventListener('click', function() {
-    document.getElementById('chat-popup').style.display = 'flex';
+    const chatPopup = document.getElementById('chat-popup');
+    const chatArrow = document.getElementById('chat-arrow');
+    
+    if (chatPopup.style.display === 'none' || chatPopup.style.display === '') {
+        chatPopup.style.display = 'flex';
+        chatArrow.style.display = 'none'; // Hide the arrow when chat is open
+    } else {
+        chatPopup.style.display = 'none';
+        chatArrow.style.display = 'block'; // Show the arrow when chat is closed
+    }
 });
 
 document.getElementById('close-chat').addEventListener('click', function() {
     document.getElementById('chat-popup').style.display = 'none';
+    document.getElementById('chat-arrow').style.display = 'block'; // Show the arrow when chat is closed
 });
 
 async function sendMessage() {

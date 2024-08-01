@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finance Guru</title>
+    <title>Finance Guru - Powered by NatWest Group</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -13,37 +13,89 @@
     <header class="header purple darken-4 white-text center-align">
         <div class="container">
             <h1>Finance Guru</h1>
-            <p>Your personal financial advisor</p>
+            <p class="powered-by">Powered by <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/NatWest-logo.png" alt="NatWest Logo" class="natwest-logo"></p>
         </div>
     </header>
 
     <section class="news-container container">
         <h2 class="center-align">Latest Finance News</h2>
-        <div class="card">
-            <div class="card-content">
-                <span class="card-title">Market Trends</span>
-                <p>The stock market saw significant gains today with major indices reaching new highs...</p>
+        <div class="row">
+            <!-- Article 1 -->
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Market Trends</span>
+                        <p>The stock market saw significant gains today with major indices reaching new highs...</p>
+                        <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['Jan','Feb','Mar','Apr'],datasets:[{label:'Stock Market',data:[100,200,300,400]}]}}" alt="Market Trends Chart" class="responsive-img">
+                        <p>Index Value: 10,000</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <span class="card-title">Cryptocurrency Update</span>
-                <p>Bitcoin and other cryptocurrencies experienced a slight dip, causing investors to...</p>
+            <!-- Article 2 -->
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Cryptocurrency Update</span>
+                        <p>Bitcoin and other cryptocurrencies experienced a slight dip, causing investors to...</p>
+                        <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['Jan','Feb','Mar','Apr'],datasets:[{label:'Bitcoin',data:[40000,35000,30000,25000]}]}}" alt="Cryptocurrency Chart" class="responsive-img">
+                        <p>Bitcoin Price: $40,000</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <span class="card-title">Economic Forecast</span>
-                <p>Experts predict a steady growth in the economy over the next quarter with...</p>
+            <!-- Article 3 -->
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Economic Forecast</span>
+                        <p>Experts predict a steady growth in the economy over the next quarter with...</p>
+                        <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Q1','Q2','Q3','Q4'],datasets:[{label:'Growth',data:[2,3,4,5]}]}}" alt="Economic Forecast Chart" class="responsive-img">
+                        <p>Growth Rate: 3%</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Article 4 -->
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Mortgage News</span>
+                        <p>The mortgage rates have been fluctuating over the past few weeks due to market conditions...</p>
+                        <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['Jan','Feb','Mar','Apr'],datasets:[{label:'Mortgage Rate',data:[3.5,3.6,3.7,3.5]}]}}" alt="Mortgage Chart" class="responsive-img">
+                        <p>Current Rate: 3.5%</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Article 5 -->
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Current Loan Market</span>
+                        <p>Loan interest rates remain at historic lows, making it an ideal time for borrowers...</p>
+                        <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['Jan','Feb','Mar','Apr'],datasets:[{label:'Loan Rate',data:[2.5,2.6,2.7,2.5]}]}}" alt="Loan Market Chart" class="responsive-img">
+                        <p>Interest Rate: 2.5%</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Article 6 -->
+            <div class="col s12 m6 l4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Borrowing Trends in the UK</span>
+                        <p>The UK borrowing trends show a shift towards more sustainable and eco-friendly investments...</p>
+                        <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['Jan','Feb','Mar','Apr'],datasets:[{label:'Investment Rate',data:[4,4.5,5,5.5]}]}}" alt="Borrowing Trends Chart" class="responsive-img">
+                        <p>Investment Rate: 5%</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="fixed-action-btn">
-        <a class="btn-floating btn-large purple darken-4" id="chat-icon">
-            <i class="large material-icons">chat</i>
-        </a>
-    </div>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" id="chat-icon">
+        <i class="material-icons">chat</i>
+    </a>
+    <div class="chat-arrow" id="chat-arrow">↓</div>
+</div>
+
 
     <div class="chat-popup card" id="chat-popup">
         <div class="chat-header card-title purple darken-4 white-text">
@@ -54,14 +106,14 @@
             <div class="message bot card-panel grey lighten-4">Welcome to Finance Guru! How can I assist you with your financial questions today?</div>
         </div>
         <div class="input-field">
-            <input type="text" id="user-input" placeholder="Type your message here...">
+            <input type="text" id="user-input" placeholder="Type your message here..." onkeydown="if(event.key === 'Enter') sendMessage();">
             <button class="btn purple darken-4 white-text" onclick="sendMessage()">Send</button>
         </div>
     </div>
 
     <footer class="footer purple darken-4 white-text center-align">
         <div class="container">
-            <p>© 2024 Finance Guru. All rights reserved.</p>
+            <p>© 2024 Finance Guru - Powered by NatWest Group. All rights reserved.</p>
         </div>
     </footer>
 
